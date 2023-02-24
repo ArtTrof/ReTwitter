@@ -1,0 +1,5 @@
+web\project\app\MessageControllerTest.class
+web\project\app\AppApplicationTests.class
+web\project\app\LoginTest.class
+web\project\app\SimpleTest.class
+web\project\app\services\UserServiceTest.class

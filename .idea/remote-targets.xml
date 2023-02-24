@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="ec2-user@ec2-3-69-151-55.eu-central-1.compute.amazonaws.com:22" type="ssh/sftp" uuid="3f69bf8a-94a7-4981-bc0a-bccc2ee17a1d">
+        <config>
+          <option name="projectRootOnTarget" value="/home/ec2-user/app" />
+          <option name="serverName" value="ec2-user@ec2-3-69-151-55.eu-central-1.compute.amazonaws.com:22 key" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="javaVersionString" value="1.8.0_362" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>
