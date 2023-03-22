@@ -10,7 +10,7 @@
         </div>
     </div>
 
-  <#include "parts/messageEdit.ftlh"/>
+  <#include "parts/messageEdit.ftlh" />
 
-<#include  "parts/messageList.ftlh"/>
+<#include  "parts/messageList.ftlh" />
 </@c.page>
