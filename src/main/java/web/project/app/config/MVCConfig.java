@@ -14,9 +14,10 @@ import web.project.app.util.RedirectInterceptor;
 public class MVCConfig implements WebMvcConfigurer {
     @Value("${upload.path}")
     private String uploadPath;
+
     @Bean
-    public RestTemplate getRest(){
-        return  new RestTemplate();
+    public RestTemplate getRest() {
+        return new RestTemplate();
     }
 
     @Override

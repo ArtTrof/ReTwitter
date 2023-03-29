@@ -16,7 +16,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "usr")
-public class User implements UserDetails  {
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -31,22 +31,21 @@ public class User implements UserDetails  {
     private String email;
     private String activationCode;
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name="user_role",joinColumns = @JoinColumn(name = "user_id"))
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Message> messages;
 
     @ManyToMany
-    @JoinTable(name="user_subscriptions",joinColumns = {@JoinColumn(name="channel_id")},
-    inverseJoinColumns = {@JoinColumn(name="subscriber_id")})
+    @JoinTable(name = "user_subscriptions", joinColumns = {@JoinColumn(name = "channel_id")},
+            inverseJoinColumns = {@JoinColumn(name = "subscriber_id")})
     private Set<User> subscribers = new HashSet<>();
     @ManyToMany
-    @JoinTable(name="user_subscriptions",joinColumns = {@JoinColumn(name="subscriber_id")},
-            inverseJoinColumns = {@JoinColumn(name="channel_id")})
+    @JoinTable(name = "user_subscriptions", joinColumns = {@JoinColumn(name = "subscriber_id")},
+            inverseJoinColumns = {@JoinColumn(name = "channel_id")})
     private Set<User> subscriptions = new HashSet<>();
-
 
 
     public Long getId() {
@@ -60,7 +59,6 @@ public class User implements UserDetails  {
     public String getUsername() {
         return username;
     }
-
 
 
     public String getPassword() {
@@ -86,6 +84,7 @@ public class User implements UserDetails  {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -114,7 +113,8 @@ public class User implements UserDetails  {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles();
     }
-    public boolean isAdmin(){
+
+    public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
     }
 

@@ -48,7 +48,7 @@ public class MessageController {
                        Model model,
                        @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
                        @AuthenticationPrincipal User user) {
-        Page<MessageDTO> page = messageService.messageList(pageable, filter,user);
+        Page<MessageDTO> page = messageService.messageList(pageable, filter, user);
 
 
         model.addAttribute("page", page);
@@ -76,7 +76,7 @@ public class MessageController {
             messageRepository.save(message);
         }
 
-        Page<MessageDTO> page = this.messageService.messageList(pageable, "",user);
+        Page<MessageDTO> page = this.messageService.messageList(pageable, "", user);
 
         model.addAttribute("page", page);
 
@@ -144,16 +144,16 @@ public class MessageController {
             @AuthenticationPrincipal User currentUser,
             @PathVariable Message message,
             RedirectAttributes redirectAttributes,
-            @RequestHeader(required = false)String referer
-    ){
+            @RequestHeader(required = false) String referer
+    ) {
         Set<User> likes = message.getLikes();
-        if (likes.contains(currentUser) ){
+        if (likes.contains(currentUser)) {
             likes.remove(currentUser);
-        }else{
+        } else {
             likes.add(currentUser);
         }
         UriComponents build = UriComponentsBuilder.fromHttpUrl(referer).build();
-        build.getQueryParams().entrySet().forEach(pair->redirectAttributes.addAttribute(pair.getKey(),pair.getValue()));
-        return "redirect:"+build.getPath();
+        build.getQueryParams().entrySet().forEach(pair -> redirectAttributes.addAttribute(pair.getKey(), pair.getValue()));
+        return "redirect:" + build.getPath();
     }
 }

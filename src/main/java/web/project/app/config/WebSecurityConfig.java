@@ -20,6 +20,7 @@ import javax.sql.DataSource;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
+
     private final UserService userService;
 
     private final PasswordEncoder passwordEncoder;
@@ -29,7 +30,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         this.userService = userService;
         this.passwordEncoder = passwordEncoder;
     }
-
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
