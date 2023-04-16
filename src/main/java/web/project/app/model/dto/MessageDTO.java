@@ -14,14 +14,15 @@ public class MessageDTO {
     private Boolean meLiked;
 
     public MessageDTO(Message message, Long likes, Boolean meLiked) {
-        this.id= message.getId();
-        this.text= message.getText();
-        this.tag= message.getTag();
-        this.author= message.getAuthor();
-        this.filename= message.getFilename();
+        this.id = message.getId();
+        this.text = message.getText();
+        this.tag = message.getTag();
+        this.author = message.getAuthor();
+        this.filename = message.getFilename();
         this.likes = likes;
         this.meLiked = meLiked;
     }
+
     public String getAuthorName() {
         return MessageHelper.getAuthorName(author);
     }
