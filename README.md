@@ -1,5 +1,6 @@
 This project is Twitters' prototype called ReTwitter.
 Technologies used in this project : 
+</br>
 -Spring Core/MVC/Boot/Security/JPA 
 Hibernate , HQL , JUnit tests(module , integration) , 
 MailSender(via google smtp api through Imap with personal mail) , FlyWay(DB migration) , Freemarker(template handler) , PostgreSQL ,Bootstrap,HTML.
