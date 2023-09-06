@@ -1,4 +1,5 @@
 This project is Twitters' prototype called ReTwitter.
+</br>
 Technologies used in this project : 
 </br>
 - Spring Boot Core/MVC/Security/Data JPA
@@ -6,10 +7,10 @@ Technologies used in this project :
 - Hibernate
 </br>
 -  HQL
-   /br>
--  JUnit
-  </br>
-- MailSender(via google smtp api through Imap with personal mail)
+   </br>   
+-  JUnit 
+  </br>  
+- MailSender(via google smtp api through Imap with personal mail)  
 </br>
 - FlyWay(DB migration)
 </br>
