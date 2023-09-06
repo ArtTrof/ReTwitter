@@ -1,29 +1,21 @@
 This project is Twitters' prototype called ReTwitter.
 </br>
 Technologies used in this project : 
+<div>
+</br>- Spring Boot Core/MVC/Security/Data JPA
+</br>- Hibernate
+</br>-  HQL
+</br>-  JUnit 
+</br>- MailSender(via google smtp api through Imap with personal mail)  
+</br>- FlyWay(DB migration)
+</br>- Freemarker(template resolver)
+</br>- PostgreSQL
+</br>- Bootstrap,HTML,Mustache
+</br>- Captcha 
+</br>- Turbolink
+</div>
 </br>
-- Spring Boot Core/MVC/Security/Data JPA
-</br>
-- Hibernate
-</br>
--  HQL
-   </br>   
--  JUnit 
-  </br>  
-- MailSender(via google smtp api through Imap with personal mail)  
-</br>
-- FlyWay(DB migration)
-</br>
-- Freemarker(template resolver)
-</br>
-- PostgreSQL
-</br>
-- Bootstrap,HTML,Mustache
-  </br>
-- Captcha 
-</br>
-- Turbolink
-</br>
+
 Main page:
 ![image](https://user-images.githubusercontent.com/118562434/221235104-2239ba13-b317-45af-a110-2f74b9091fbf.png)
 </br>
